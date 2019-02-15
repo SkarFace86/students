@@ -34,4 +34,52 @@ class Student
         $this->_advisor = $advisor;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getSid()
+    {
+        return $this->_sid;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getLast()
+    {
+        return $this->_last;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getFirst()
+    {
+        return $this->_first;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getBirthdate()
+    {
+        return $this->_birthdate;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getGpa()
+    {
+        return $this->_gpa;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getAdvisor()
+    {
+        return $this->_advisor;
+    }
+
 }

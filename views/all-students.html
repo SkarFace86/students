@@ -8,12 +8,13 @@
     <title>Students</title>
 </head>
 <body>
-    <!--<h1>Students</h1>-->
-    <!--<ul>-->
-    <!--<repeat group="{{ @students }}" value="{{ @student }}">-->
-        <!--<li>{{ @student['last'] }}, {{ @student['first'] }}</li>-->
-    <!--</repeat>-->
-    <!--</ul>-->
+    <h1>Students</h1>
+    <ul>
+    <repeat group="{{ @students }}" value="{{ @student }}">
+        <li><a href="{{ @BASE }}/view/{{ @student['sid'] }}">
+            {{ @student['last'] }}, {{ @student['first'] }}</a></li>
+    </repeat>
+    </ul>
 
 <a href="add">Add a Student</a>
 </body>

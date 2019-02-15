@@ -11,10 +11,10 @@
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
-session_start();
 //Require fat-free
 require_once('vendor/autoload.php');
 require_once('model/db-functions.php');
+session_start();
 
 //connect to database
 $dbh = connect();
@@ -69,6 +69,14 @@ $f3->route('GET|POST /add', function($f3) {
     echo $template->render('views/add-student.html');
 });
 
+$f3->route('GET|POST /view/@sid', function($f3, $params) {
+    $sid = $params['sid'];
+    $student = getStudent($sid);
+
+    $_SESSION['student'] = $student;
+    $template = new Template();
+    echo $template->render('views/view-student.html');
+});
 
 //Run fat-free
 $f3->run();
