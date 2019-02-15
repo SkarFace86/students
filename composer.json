@@ -1,0 +1,15 @@
+{
+  "name":"bskargre/it328/students",
+  "authors": [
+    {
+      "name": "Brandon Skar",
+      "email": "bransk01@yahoo.com"
+    }
+  ],
+  "require": {
+    "bcosca/fatfree-core": "dev-master"
+  },
+  "autoload": {
+    "classmap": ["classes/"]
+  }
+}
